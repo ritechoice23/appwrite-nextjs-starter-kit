@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils";
 import { LogoutButton } from "../auth";
 
 const navigation = [
-    { name: "Home", href: appRoutes.home.path, icon: Home },
+    { name: "Home", href: appRoutes.home.path, icon: Home, badge: undefined as string | undefined },
 ];
 
 export function TopNavbar() {
