@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { createSessionFromOAuth } from "@/services/auth-service";
 import { appRoutes } from "@/routes/app";
@@ -8,7 +8,7 @@ import { authRoutes } from "@/routes/auth";
 import { toast } from "sonner";
 import { useAuthStore } from "@/store/auth-store";
 
-export default function OAuthCallbackPage() {
+function OAuthCallbackContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const { fetchUser } = useAuthStore();
@@ -46,5 +46,20 @@ export default function OAuthCallbackPage() {
                 <p className="text-muted-foreground">Completing login...</p>
             </div>
         </div>
+    );
+}
+
+export default function OAuthCallbackPage() {
+    return (
+        <Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                    <p className="text-muted-foreground">Loading...</p>
+                </div>
+            </div>
+        }>
+            <OAuthCallbackContent />
+        </Suspense>
     );
 }
