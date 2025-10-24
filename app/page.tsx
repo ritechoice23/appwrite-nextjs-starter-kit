@@ -71,8 +71,8 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-linear-to-b from-background to-muted/20">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-backdrop-filter:bg-background/60 px-4">
-        <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-backdrop-filter:bg-background/60">
+        <div className="container flex h-14 max-w-screen-2xl items-center justify-between mx-auto px-4">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2 transition-opacity hover:opacity-80">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-primary to-primary/80 text-primary-foreground font-bold shadow-sm">
@@ -104,7 +104,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="container py-24 md:py-32">
+      <section className="mx-auto container py-24 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
             Welcome to ritchoice23
@@ -131,7 +131,7 @@ export default function LandingPage() {
       </section>
 
       {/* Unique Feature Highlight */}
-      <section id="migrations" className="container py-16 md:py-24 bg-primary/5">
+      <section id="migrations" className="mx-auto container py-16 md:py-24 bg-primary/5">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-8">
             <span className="inline-block text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full mb-4">
@@ -202,7 +202,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="container py-16 md:py-24">
+      <section id="features" className="mx-auto container py-16 md:py-24">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-4">
             Everything You Need to Kickstart Your Product
@@ -245,7 +245,7 @@ export default function LandingPage() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="container py-16 md:py-24 bg-muted/30">
+      <section className="mx-auto container py-16 md:py-24 bg-muted/30">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">Built with Modern Tools</h2>
           <p className="text-muted-foreground mb-8">
@@ -270,7 +270,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="container py-16 md:py-24">
+      <section className="mx-auto container py-16 md:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Build?</h2>
           <p className="text-muted-foreground mb-8">
@@ -283,7 +283,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contribution Section */}
-      <section id="contribute" className="container py-16 md:py-24 bg-muted/30">
+      <section id="contribute" className="mx-auto container py-16 md:py-24 bg-muted/30">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Help Make It Better</h2>
@@ -324,9 +324,6 @@ export default function LandingPage() {
             </p>
             <Button asChild variant="outline" className="gap-2">
               <a href="https://github.com/ritchoice23/appwrite-nextjs-starter-kit" target="_blank" rel="noopener noreferrer">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                </svg>
                 Contribute on GitHub
               </a>
             </Button>
@@ -336,7 +333,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t py-8">
-        <div className="container text-center text-sm text-muted-foreground">
+        <div className="mx-auto container text-center text-sm text-muted-foreground">
           <p>Built by ritchoice23 • Made with Next.js and Appwrite</p>
         </div>
       </footer>
