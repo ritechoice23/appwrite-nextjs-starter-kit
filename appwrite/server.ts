@@ -1,4 +1,3 @@
-"use server";
 import { appwriteConfig } from '@/appwrite/config';
 import { Account, Client, TablesDB } from 'node-appwrite';
 

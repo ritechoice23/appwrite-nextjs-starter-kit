@@ -78,7 +78,7 @@ export default function LandingPage() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-primary to-primary/80 text-primary-foreground font-bold shadow-sm">
                 R
               </div>
-              <span className="font-semibold text-lg hidden sm:inline-block">ritchoice23</span>
+              <span className="font-semibold text-lg hidden sm:inline-block">ritechoice23</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -107,7 +107,7 @@ export default function LandingPage() {
       <section className="mx-auto container py-24 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
-            Welcome to ritchoice23
+            Welcome to ritechoice23
             <br />
             <span className="text-primary">Next.js + Appwrite</span>
             <br />
@@ -323,7 +323,7 @@ export default function LandingPage() {
               Whether you&apos;re fixing typos, adding tests, or building new features - every contribution counts and makes this starter kit better for the entire community.
             </p>
             <Button asChild variant="outline" className="gap-2">
-              <a href="https://github.com/ritchoice23/appwrite-nextjs-starter-kit" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/ritechoice23/appwrite-nextjs-starter-kit" target="_blank" rel="noopener noreferrer">
                 Contribute on GitHub
               </a>
             </Button>
@@ -334,7 +334,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t py-8">
         <div className="mx-auto container text-center text-sm text-muted-foreground">
-          <p>Built by ritchoice23 • Made with Next.js and Appwrite</p>
+          <p>Built by ritechoice23 • Made with Next.js and Appwrite</p>
         </div>
       </footer>
     </div>
