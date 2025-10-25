@@ -1,5 +1,3 @@
-"use client";
-
 import { TopNavbar } from "./top-navbar";
 
 interface AuthenticatedLayoutProps {
