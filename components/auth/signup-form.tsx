@@ -22,7 +22,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod';
 import InputError from "@/components/ui/input-error"
 import { CreateAccountFormData, createAccountSchema } from "@/validations/auth-schema"
-import { createAccount, loginWithOAuth } from "@/services/auth-service"
+import { createAccount, loginWithOAuth, createEmailVerification } from "@/services/auth-service"
 import { toast } from "sonner"
 import { redirect } from "next/navigation"
 import { useAuth } from "@/hooks/use-auth"
@@ -48,13 +48,18 @@ export function SignUpForm({
     const onSubmit = handleSubmit(async (data: CreateAccountFormData) => {
         const response = await createAccount(data)
         if (!response.status) {
-            toast("Account creation failed.")
+            toast.error("Account creation failed.")
             return
         }
-        toast.success("Account created successfully!")
+
+        // Send verification email after account creation
+        await createEmailVerification().catch(() => null);
+
+        toast.success("Account created successfully! Please check your email to verify your account.")
+        // Redirect to home page since user is now logged in
         setTimeout(() => {
-            redirect(authRoutes.login.path)
-        }, 2000);
+            window.location.href = "/home"
+        }, 1500);
     })
 
     const handleGoogleSignup = async () => {

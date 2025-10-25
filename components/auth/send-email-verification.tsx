@@ -3,8 +3,7 @@
 import { useAuth } from '@/hooks/use-auth';
 import { createEmailVerification } from '@/services/auth-service';
 import { toast } from 'sonner';
-import { useEffect, useCallback } from 'react';
-import { authRoutes } from '@/routes/auth';
+import { useCallback } from 'react';
 import { Button } from '../ui/button';
 
 export default function VerifyEmailForm() {
@@ -20,19 +19,13 @@ export default function VerifyEmailForm() {
         }
     }, []);
 
-    useEffect(() => {
-        if (user && !user.emailVerification) {
-            handleResendVerification();
-        }
-    }, [user]);
-
     if (!user) return null;
 
     return (
         <div>
             <h2>Verify Your Email</h2>
             <p>
-                A verification email has been sent to {user.email}. Please check your inbox and follow the instructions to verify your email address.
+                Please check your inbox at {user.email} for a verification email. Click the link in the email to verify your email address.
             </p>
             <Button onClick={handleResendVerification}>
                 Resend Verification Email

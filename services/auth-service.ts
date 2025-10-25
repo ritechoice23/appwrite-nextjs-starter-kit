@@ -12,6 +12,23 @@ export async function createAccount(data: CreateAccountFormData) {
         password: data.password
     });
 
+    // Automatically log the user in after creating account
+    const session = await account.createEmailPasswordSession({
+        email: data.email,
+        password: data.password
+    }).catch((e) => {
+        console.log(e);
+        return null;
+    });
+
+    if (!session) {
+        return {
+            status: false,
+            message: 'Account created but login failed',
+            data: user
+        }
+    }
+
     return {
         status: true,
         'message': 'Account created successfully',
